@@ -21,3 +21,6 @@ await receiver.setVolume(75)
 // Set input source to DVD
 await receiver.input('dvd')
 ```
+
+## Docs
+https://callmekory.github.io/pioneer-receiver-api/index.html

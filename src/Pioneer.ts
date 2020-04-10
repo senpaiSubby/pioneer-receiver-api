@@ -3,7 +3,6 @@
 - It’s not a bug – it’s an undocumented feature.        -
 -------------------------------------------------------*/
 import fetch from 'node-fetch'
-import teletype from 'teletype'
 
 import { INPUT_NUMS } from './constants'
 
@@ -32,6 +31,7 @@ export default class Pioneer {
   async sendCommand(command: string) {
     try {
       await fetch(`${this.commandEndpoint}${command}`)
+      return 'ok'
     } catch {
       throw new Error('Failed to connect to reciever')
     }
@@ -165,5 +165,80 @@ export default class Pioneer {
    */
   async trebleDown() {
     return this.sendCommand('TD')
+  }
+
+  // * -------------------- Sound Explorer Options --------------------
+
+  /**
+   * Sets Dialog Enhancement mode
+   * @param mode off | flat | up1 | up2 | up3 | up4
+   */
+  async setDialogEnhancementMode(mode: 'off' | 'flat' | 'up1' | 'up2' | 'up3' | 'up4') {
+    const modes = {
+      off: 0,
+      flat: 1,
+      up1: 2,
+      up2: 3,
+      up3: 4,
+      up4: 5
+    }
+
+    return this.sendCommand(`${modes[mode]}ATH`)
+  }
+
+  /**
+   * Sets PQLS mode
+   * @param mode auto | off
+   */
+  async setPQLSmode(mode: 'off' | 'auto') {
+    return this.sendCommand(`${mode === 'auto' ? '1' : '0'}PQ`)
+  }
+
+  /**
+   * Sets EQ mode
+   * @param mode on | off
+   */
+  async seEQMode(mode: 'off' | 'on') {
+    return this.sendCommand(`${mode === 'on' ? '1' : '0'}ATC`)
+  }
+
+  /**
+   * Sets Standing Wave mode
+   * @param mode on | off
+   */
+  async setStandingWaveMode(mode: 'off' | 'on') {
+    return this.sendCommand(`${mode === 'on' ? '1' : '0'}ATD`)
+  }
+
+  /**
+   * Sets Phase Control mode
+   * @param mode on | off
+   */
+  async setPhaseControlMode(mode: 'on' | 'off') {
+    return this.sendCommand(`${mode === 'on' ? '1' : '0'}IS`)
+  }
+
+  /**
+   * Sets Tone mode
+   * @param mode bypass | on
+   */
+  async setToneMode(mode: 'bypass' | 'on') {
+    return this.sendCommand(`${mode === 'on' ? '1' : '0'}TO`)
+  }
+
+  /**
+   * Sets Auto Sound Retriever mode
+   * @param mode on | off
+   */
+  async setAutoSoundRetrieverMode(mode: 'on' | 'off') {
+    return this.sendCommand(`${mode === 'on' ? '1' : '0'}ATA`)
+  }
+
+  /**
+   * Sets Digital Noise Reduction mode
+   * @param mode on | off
+   */
+  async setDigitalNoiseReductionMode(mode: 'on' | 'off') {
+    return this.sendCommand(`${mode === 'on' ? '1' : '0'}ATG`)
   }
 }
