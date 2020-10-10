@@ -1,6 +1,6 @@
 {
   "name": "@callmekory/pioneer-avr",
-  "version": "1.1.1",
+  "version": "1.1.9",
   "description": "Pioneer AVR controller",
   "keywords": [
     "utils",
