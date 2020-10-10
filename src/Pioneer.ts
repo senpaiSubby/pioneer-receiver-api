@@ -36,6 +36,17 @@ export default class Pioneer {
   // * -------------------- Power Options --------------------
 
   /**
+   * Toggles power state. If on turn off, vice verse
+   */
+  async togglePower() {
+    const status = await this.getStatus()
+
+    const currentState = status.Z[0].P === 1 ? 'on' : 'off'
+
+    return currentState === 'on' ? await this.powerOff() : await this.powerOn()
+  }
+
+  /**
    * Powers receiver on
    */
   async powerOn() {
