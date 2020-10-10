@@ -1,8 +1,3 @@
-/*!
- * Coded by CallMeKory - https://github.com/callmekory
- * 'It’s not a bug – it’s an undocumented feature.'
- */
-
 export const INPUT_NUMS = {
   dvd: '04',
   bd: '25',

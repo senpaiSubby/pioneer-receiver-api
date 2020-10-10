@@ -1,13 +1,9 @@
-/*-------------------------------------------------------
-- Coded by CallMeKory - https://github.com/callmekory   -
-- It’s not a bug – it’s an undocumented feature.        -
--------------------------------------------------------*/
 import fetch from 'node-fetch'
 
 import { INPUT_NUMS } from './constants'
 
 /**
- * Pioneer AVR coontroler
+ * Pioneer AVR controller
  * Controls Pioneer AVR's over wifi
  * @param host Host IP of receiver
  */
@@ -73,28 +69,50 @@ export default class Pioneer {
     return this.sendCommand(`${newVolume}VL`)
   }
 
-  async getVol() {
+  /**
+   * Gets the current volume
+   * @param raw return raw volume or converted to 0-100 scale
+   */
+  async getVol(raw = false) {
     const status = await this.getStatus()
 
     const vol = status.Z[0].V
+    if (raw) return vol
+
     return Math.floor((vol! * 100) / 185)
   }
 
   /**
-   * Increases volume by 1dB's
+   * Increase the volume by 1db
+   * @param db number of db's to increase
    */
-  async volumeUp() {
-    await this.sendCommand('VU')
-
-    return this.sendCommand('VU')
+  async volumeUp(db = 1) {
+    for (var i = 0; i < db; i++) {
+      await this.sendCommand('VU')
+    }
+    return 'ok'
   }
 
   /**
-   * Reduces volume by 1dB's
+   * Reduce the volume by 1db
+   * @param db number of db's to decrease
    */
-  async volumeDown() {
-    await this.sendCommand('VD')
-    return this.sendCommand('VD')
+  async volumeDown(db = 1) {
+    for (var i = 0; i < db; i++) {
+      await this.sendCommand('VD')
+    }
+    return 'ok'
+  }
+
+  /**
+   * Toggles mute state. If on turn off, vice verse
+   */
+  async toggleMute() {
+    const status = await this.getStatus()
+
+    const currentState = status.Z[0].M === 1 ? 'on' : 'off'
+
+    return currentState === 'on' ? await this.unMute() : await this.mute()
   }
 
   /**
@@ -105,7 +123,7 @@ export default class Pioneer {
   }
 
   /**
-   * Unmutes receiver
+   * Unmutes the receiver
    */
   async unMute() {
     return this.sendCommand('MF')
@@ -142,14 +160,14 @@ export default class Pioneer {
   /**
    * Increases base level by 1dB
    */
-  async baseUp() {
+  async bassUp() {
     return this.sendCommand('BI')
   }
 
   /**
    * Decreases base level by 1dB
    */
-  async baseDown() {
+  async bassDown() {
     return this.sendCommand('BD')
   }
 
