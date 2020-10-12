@@ -45,8 +45,8 @@ interface PioneerStatus {
 
 interface Z {
   P: number
-  V?: number
-  M?: number
+  V: number
+  M: number
   I: number[]
   C: number
 }

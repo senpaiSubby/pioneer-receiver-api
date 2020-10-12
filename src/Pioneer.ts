@@ -1,6 +1,7 @@
 import fetch from 'node-fetch'
 
 import { INPUT_NUMS } from './constants'
+import { formatVolume, volumeToDB } from './utils'
 
 /**
  * Pioneer AVR controller
@@ -64,15 +65,15 @@ export default class Pioneer {
 
   /**
    * Sets the volume
-   * @param newVol volume between 0 and 100
+   * @param newVol volume between 0 and 185
    */
   async setVolume(newVol: number) {
-    if (newVol > 100 || newVol < 0) {
+    if (newVol > 185 || newVol < 0) {
       return new Error('Volume must be a number between 0 and 100')
     }
 
     // Convert 0-100 to 0-185
-    let newVolume = String(Math.floor((newVol * 185) / 100))
+    let newVolume = String(newVol)
 
     if (newVolume.length === 1) newVolume = `00${newVolume}`
     if (newVolume.length === 2) newVolume = `0${newVolume}`
@@ -82,15 +83,16 @@ export default class Pioneer {
 
   /**
    * Gets the current volume
-   * @param raw return raw volume or converted to 0-100 scale
+   * @param format "raw" returns volume between 0-185, "db" return dB form
    */
-  async getVol(raw = false) {
+  async getVol(format: 'raw' | 'db' = 'raw') {
     const status = await this.getStatus()
 
-    const vol = status.Z[0].V
-    if (raw) return vol
+    if (format === 'db') {
+      return formatVolume(volumeToDB(status.Z[0].V))
+    }
 
-    return Math.floor((vol! * 100) / 185)
+    return status.Z[0].V
   }
 
   /**
@@ -98,7 +100,7 @@ export default class Pioneer {
    * @param db number of db's to increase
    */
   async volumeUp(db = 1) {
-    for (var i = 0; i < db; i++) {
+    for (let i = 0; i < db; i++) {
       await this.sendCommand('VU')
     }
     return 'ok'
@@ -109,7 +111,7 @@ export default class Pioneer {
    * @param db number of db's to decrease
    */
   async volumeDown(db = 1) {
-    for (var i = 0; i < db; i++) {
+    for (let i = 0; i < db; i++) {
       await this.sendCommand('VD')
     }
     return 'ok'
