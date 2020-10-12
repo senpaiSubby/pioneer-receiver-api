@@ -10,7 +10,9 @@ import { formatVolume, volumeToDB } from './utils'
  */
 export default class Pioneer {
   private host: string
+
   private statusEndpoint: string
+
   private commandEndpoint: string
 
   constructor(host: string) {
@@ -85,7 +87,7 @@ export default class Pioneer {
    * Gets the current volume
    * @param format "raw" returns volume between 0-185, "db" return dB form
    */
-  async getVol(format: 'raw' | 'db' = 'raw') {
+  async currentVolume(format: 'raw' | 'db' = 'raw') {
     const status = await this.getStatus()
 
     if (format === 'db') {

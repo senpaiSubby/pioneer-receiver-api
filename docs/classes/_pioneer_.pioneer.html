@@ -113,8 +113,8 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_pioneer_.pioneer.html#bassdown" class="tsd-kind-icon">bass<wbr>Down</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_pioneer_.pioneer.html#bassup" class="tsd-kind-icon">bass<wbr>Up</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_pioneer_.pioneer.html#currentvolume" class="tsd-kind-icon">current<wbr>Volume</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_pioneer_.pioneer.html#getstatus" class="tsd-kind-icon">get<wbr>Status</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_pioneer_.pioneer.html#getvol" class="tsd-kind-icon">get<wbr>Vol</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_pioneer_.pioneer.html#inputnext" class="tsd-kind-icon">input<wbr>Next</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_pioneer_.pioneer.html#inputprev" class="tsd-kind-icon">input<wbr>Prev</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_pioneer_.pioneer.html#mute" class="tsd-kind-icon">mute</a></li>
@@ -155,7 +155,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9243a6c/src/Pioneer.ts#L14">Pioneer.ts:14</a></li>
+									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9b9c7ba/src/Pioneer.ts#L16">Pioneer.ts:16</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -177,7 +177,7 @@
 					<div class="tsd-signature tsd-kind-icon">command<wbr>Endpoint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9243a6c/src/Pioneer.ts#L14">Pioneer.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9b9c7ba/src/Pioneer.ts#L16">Pioneer.ts:16</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -187,7 +187,7 @@
 					<div class="tsd-signature tsd-kind-icon">host<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9243a6c/src/Pioneer.ts#L12">Pioneer.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9b9c7ba/src/Pioneer.ts#L12">Pioneer.ts:12</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -197,7 +197,7 @@
 					<div class="tsd-signature tsd-kind-icon">status<wbr>Endpoint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9243a6c/src/Pioneer.ts#L13">Pioneer.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9b9c7ba/src/Pioneer.ts#L14">Pioneer.ts:14</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -214,12 +214,12 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9243a6c/src/Pioneer.ts#L183">Pioneer.ts:183</a></li>
+									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9b9c7ba/src/Pioneer.ts#L185">Pioneer.ts:185</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Decreases base level by 1dB</p>
+									<p>Decreases bass level by 1dB</p>
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -236,12 +236,12 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9243a6c/src/Pioneer.ts#L176">Pioneer.ts:176</a></li>
+									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9b9c7ba/src/Pioneer.ts#L178">Pioneer.ts:178</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Increases base level by 1dB</p>
+									<p>Increases bass level by 1dB</p>
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -249,33 +249,16 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="getstatus" class="tsd-anchor"></a>
-					<h3>get<wbr>Status</h3>
+					<a name="currentvolume" class="tsd-anchor"></a>
+					<h3>current<wbr>Volume</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Status<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">PioneerStatus</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">current<wbr>Volume<span class="tsd-signature-symbol">(</span>format<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">"raw"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"db"</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9243a6c/src/Pioneer.ts#L22">Pioneer.ts:22</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">PioneerStatus</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="getvol" class="tsd-anchor"></a>
-					<h3>get<wbr>Vol</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Vol<span class="tsd-signature-symbol">(</span>format<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">"raw"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"db"</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9243a6c/src/Pioneer.ts#L88">Pioneer.ts:88</a></li>
+									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9b9c7ba/src/Pioneer.ts#L90">Pioneer.ts:90</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -297,6 +280,23 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getstatus" class="tsd-anchor"></a>
+					<h3>get<wbr>Status</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Status<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">PioneerStatus</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9b9c7ba/src/Pioneer.ts#L24">Pioneer.ts:24</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">PioneerStatus</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="inputnext" class="tsd-anchor"></a>
 					<h3>input<wbr>Next</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -306,7 +306,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9243a6c/src/Pioneer.ts#L160">Pioneer.ts:160</a></li>
+									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9b9c7ba/src/Pioneer.ts#L162">Pioneer.ts:162</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -328,7 +328,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9243a6c/src/Pioneer.ts#L167">Pioneer.ts:167</a></li>
+									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9b9c7ba/src/Pioneer.ts#L169">Pioneer.ts:169</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -350,7 +350,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9243a6c/src/Pioneer.ts#L134">Pioneer.ts:134</a></li>
+									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9b9c7ba/src/Pioneer.ts#L136">Pioneer.ts:136</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -372,7 +372,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9243a6c/src/Pioneer.ts#L60">Pioneer.ts:60</a></li>
+									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9b9c7ba/src/Pioneer.ts#L62">Pioneer.ts:62</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -394,7 +394,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9243a6c/src/Pioneer.ts#L53">Pioneer.ts:53</a></li>
+									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9b9c7ba/src/Pioneer.ts#L55">Pioneer.ts:55</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -416,7 +416,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9243a6c/src/Pioneer.ts#L232">Pioneer.ts:232</a></li>
+									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9b9c7ba/src/Pioneer.ts#L234">Pioneer.ts:234</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -447,7 +447,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9243a6c/src/Pioneer.ts#L28">Pioneer.ts:28</a></li>
+									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9b9c7ba/src/Pioneer.ts#L30">Pioneer.ts:30</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -470,7 +470,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9243a6c/src/Pioneer.ts#L264">Pioneer.ts:264</a></li>
+									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9b9c7ba/src/Pioneer.ts#L266">Pioneer.ts:266</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -501,7 +501,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9243a6c/src/Pioneer.ts#L207">Pioneer.ts:207</a></li>
+									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9b9c7ba/src/Pioneer.ts#L209">Pioneer.ts:209</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -532,7 +532,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9243a6c/src/Pioneer.ts#L272">Pioneer.ts:272</a></li>
+									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9b9c7ba/src/Pioneer.ts#L274">Pioneer.ts:274</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -563,7 +563,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9243a6c/src/Pioneer.ts#L151">Pioneer.ts:151</a></li>
+									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9b9c7ba/src/Pioneer.ts#L153">Pioneer.ts:153</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -594,7 +594,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9243a6c/src/Pioneer.ts#L224">Pioneer.ts:224</a></li>
+									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9b9c7ba/src/Pioneer.ts#L226">Pioneer.ts:226</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -625,7 +625,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9243a6c/src/Pioneer.ts#L248">Pioneer.ts:248</a></li>
+									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9b9c7ba/src/Pioneer.ts#L250">Pioneer.ts:250</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -656,7 +656,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9243a6c/src/Pioneer.ts#L240">Pioneer.ts:240</a></li>
+									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9b9c7ba/src/Pioneer.ts#L242">Pioneer.ts:242</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -687,7 +687,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9243a6c/src/Pioneer.ts#L256">Pioneer.ts:256</a></li>
+									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9b9c7ba/src/Pioneer.ts#L258">Pioneer.ts:258</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -718,7 +718,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9243a6c/src/Pioneer.ts#L70">Pioneer.ts:70</a></li>
+									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9b9c7ba/src/Pioneer.ts#L72">Pioneer.ts:72</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -749,7 +749,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9243a6c/src/Pioneer.ts#L123">Pioneer.ts:123</a></li>
+									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9b9c7ba/src/Pioneer.ts#L125">Pioneer.ts:125</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -771,7 +771,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9243a6c/src/Pioneer.ts#L42">Pioneer.ts:42</a></li>
+									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9b9c7ba/src/Pioneer.ts#L44">Pioneer.ts:44</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -793,7 +793,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9243a6c/src/Pioneer.ts#L197">Pioneer.ts:197</a></li>
+									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9b9c7ba/src/Pioneer.ts#L199">Pioneer.ts:199</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -815,7 +815,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9243a6c/src/Pioneer.ts#L190">Pioneer.ts:190</a></li>
+									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9b9c7ba/src/Pioneer.ts#L192">Pioneer.ts:192</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -837,7 +837,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9243a6c/src/Pioneer.ts#L141">Pioneer.ts:141</a></li>
+									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9b9c7ba/src/Pioneer.ts#L143">Pioneer.ts:143</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -859,7 +859,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9243a6c/src/Pioneer.ts#L113">Pioneer.ts:113</a></li>
+									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9b9c7ba/src/Pioneer.ts#L115">Pioneer.ts:115</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -890,7 +890,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9243a6c/src/Pioneer.ts#L102">Pioneer.ts:102</a></li>
+									<li>Defined in <a href="https://github.com/callmekory/pioneer-receiver-api/blob/9b9c7ba/src/Pioneer.ts#L104">Pioneer.ts:104</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -956,10 +956,10 @@
 								<a href="_pioneer_.pioneer.html#bassup" class="tsd-kind-icon">bass<wbr>Up</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_pioneer_.pioneer.html#getstatus" class="tsd-kind-icon">get<wbr>Status</a>
+								<a href="_pioneer_.pioneer.html#currentvolume" class="tsd-kind-icon">current<wbr>Volume</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_pioneer_.pioneer.html#getvol" class="tsd-kind-icon">get<wbr>Vol</a>
+								<a href="_pioneer_.pioneer.html#getstatus" class="tsd-kind-icon">get<wbr>Status</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_pioneer_.pioneer.html#inputnext" class="tsd-kind-icon">input<wbr>Next</a>
