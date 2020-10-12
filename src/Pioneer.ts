@@ -171,14 +171,14 @@ export default class Pioneer {
   // * -------------------- Tone Control Options --------------------
 
   /**
-   * Increases base level by 1dB
+   * Increases bass level by 1dB
    */
   async bassUp() {
     return this.sendCommand('BI')
   }
 
   /**
-   * Decreases base level by 1dB
+   * Decreases bass level by 1dB
    */
   async bassDown() {
     return this.sendCommand('BD')
